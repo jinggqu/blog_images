@@ -1,7 +1,5 @@
 name: CI
 
-permissions: write-all
-
 on:
   push:
     branches: [ "main" ]
@@ -17,3 +15,5 @@ jobs:
 
       - name: Image Actions
         uses: calibreapp/image-actions@1.1.0
+        with:
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
